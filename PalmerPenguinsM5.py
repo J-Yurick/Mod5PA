@@ -92,7 +92,7 @@ while species_choice != "Done":
         selected_count = species_counts[selected_index]
         selected_percent = species_percentages[selected_index]
 
-    # classify selected species
+        # classify selected species
         if selected_percent < 25:
             size_category = "small"
         elif (selected_percent >= 25) and (selected_percent < 40):
@@ -100,7 +100,7 @@ while species_choice != "Done":
         else:
             size_category = "large"
 
-    # Determine species position
+        # Determine species position
         if (selected_species == largest_species) or \
             (selected_species == smallest_species):
             if selected_species == largest_species:
@@ -112,7 +112,7 @@ while species_choice != "Done":
 
         average_position = "above" if selected_count > average_penguins else "below"
 
-    # Output selected species statistics
+        # Output selected species statistics
         print(f"{selected_species} has {selected_count} observations, representing {selected_percent:.2f}% of the dataset.")
         print(f"{selected_species} is classified as a {size_category} species group.")
         print(f"{selected_species} is the {position_description} species group.")
