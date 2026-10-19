@@ -55,11 +55,6 @@ print(f"The average rounded up is {average_penguins_rounded_up} penguins.")
 
 for index, species in enumerate(species_names):
     print(f"{species}: {species_counts[index]} " f"({species_percentages[index]:.2f}%)")
-
-#replaced with For loop per #4
-#print(f"{species_names[0]}: {species_counts[0]} " f"({chinstrap_percent:.2f}%)")
-#print(f"{species_names[1]}: {species_counts[1]} " f"({gentoo_percent:.2f}%)")
-#print(f"{species_names[2]}: {species_counts[2]} " f"({adelie_percent:.2f}%)")
 print()
 
 # display the species with the most and fewest observations
