@@ -53,6 +53,7 @@ print(f"There are a total of {total_penguins} penguins in the dataset.")
 print(f"The average number of penguins per species is " f"{average_penguins:.1f}.")
 print(f"The average rounded up is {average_penguins_rounded_up} penguins.")
 
+# display species statistics using a loop
 for index, species in enumerate(species_names):
     print(f"{species}: {species_counts[index]} " f"({species_percentages[index]:.2f}%)")
 print()
@@ -70,7 +71,7 @@ print("Explore a species")
 species_choice = input("Enter Chinstrap, Gentoo, Adelie, or Done: ")
 print()
 
-
+# repeatedly prompt the user to explore species
 while species_choice != "Done":
     # validate species selection
     if species_choice not in species_names:
@@ -78,6 +79,7 @@ while species_choice != "Done":
 
     # Determine selected species
     else:
+        # update the number of valid selections
         valid_selections += 1
         if species_choice == species_names[0]:
             selected_index = 0
@@ -121,6 +123,7 @@ while species_choice != "Done":
     species_choice = input("Enter Chinstrap, Gentoo, Adelie, or Done: ")
     print()
 
+# display the exploration summary
 print(f"You explored {valid_selections} valid species.")
 print()
 print("Exploration complete.")
